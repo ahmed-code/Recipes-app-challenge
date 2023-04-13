@@ -49,6 +49,7 @@ class LargeRecipesCard extends StatelessWidget {
                 fontWeight: FontWeight.w600,
                 fontSize: 20,
               ),
+              overflow: TextOverflow.ellipsis,
             ),
           ),
           const Spacer(),
