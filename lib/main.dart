@@ -1,9 +1,21 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+// import 'package:hive/hive.dart';
 import 'package:recipes/cubits/recipes_cubit/recipes_cubit.dart';
 import 'package:recipes/view/pages/home_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
+late Box box;
+void main() async {
+  await Hive.initFlutter();
+
+  box = await Hive.openBox("favorites");
+  // var box = await Hive.openBox("favorites");
+  // await box.put("name", "nnnnn");
+  // var name = await box.get("favorites");
+  // print(name);
   runApp(const MyApp());
 }
 

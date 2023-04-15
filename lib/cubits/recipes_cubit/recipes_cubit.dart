@@ -17,6 +17,10 @@ class RecipesCubit extends Cubit<List<RecipeModel>> {
     List<RecipeModel> fetchedData =
         (result).map((data) => RecipeModel.fromJson(data)).toList();
 
+    fetchedData[0].isFavorite = true;
+    for (var element in fetchedData) {
+      element.isFavorite = false;
+    }
     searchList = fetchedData;
 
     emit(fetchedData);
