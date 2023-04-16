@@ -2,21 +2,25 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-// import 'package:hive/hive.dart';
+import 'package:hive/hive.dart';
+import 'package:recipes/cubits/favorites_cubit/favorites_cubit.dart';
 import 'package:recipes/cubits/recipes_cubit/recipes_cubit.dart';
+import 'package:recipes/model/recipe_model.dart';
 import 'package:recipes/view/pages/home_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:path_provider/path_provider.dart';
 
-late Box box;
-void main() async {
-  await Hive.initFlutter();
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Directory dir = await getApplicationDocumentsDirectory();
+  Hive
+    ..init(dir.path)
+    ..registerAdapter(RecipeModelAdapter());
+  await Hive.openBox("favoritesBox");
 
-  box = await Hive.openBox("favorites");
-  // var box = await Hive.openBox("favorites");
-  // await box.put("name", "nnnnn");
-  // var name = await box.get("favorites");
-  // print(name);
-  runApp(const MyApp());
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -28,6 +32,9 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => RecipesCubit()..getData(),
+        ),
+        BlocProvider(
+          create: (context) => FavoritesCubit()..getFavorite(),
         ),
       ],
       child: MaterialApp(

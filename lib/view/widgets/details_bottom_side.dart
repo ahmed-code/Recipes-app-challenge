@@ -83,12 +83,12 @@ class DetailsBottomSide extends StatelessWidget {
                   )
                 ],
               ),
-        recipeModel.topics!.length == 0
+        recipeModel.topics!.isEmpty
             ? Container()
             : Ingredients(
                 ingredients: recipeModel.topics!,
               ),
-        recipeModel.instructions!.length == 0
+        recipeModel.instructions!.isEmpty
             ? Container()
             : Instructions(
                 instructions: recipeModel.instructions!,

@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:meta/meta.dart';
 import 'package:recipes/model/recipe_model.dart';
 
@@ -10,7 +11,7 @@ class RecipesCubit extends Cubit<List<RecipeModel>> {
   RecipesCubit() : super([]);
 
   List<RecipeModel> searchList = [];
-
+  bool dataFetched = false;
   getData() async {
     List result = await RecipeApi().getRecipes();
 
@@ -22,12 +23,11 @@ class RecipesCubit extends Cubit<List<RecipeModel>> {
       element.isFavorite = false;
     }
     searchList = fetchedData;
-
+    dataFetched = true;
     emit(fetchedData);
   }
 
   filter(String searchKeyWord) {
-    print("_________$searchKeyWord __________");
     List<RecipeModel> res = [];
     if (searchKeyWord.isEmpty) {
       res = searchList;
@@ -36,6 +36,8 @@ class RecipesCubit extends Cubit<List<RecipeModel>> {
           .where((element) =>
               element.name!.toLowerCase().contains(searchKeyWord.toLowerCase()))
           .toList();
+
+      if (res.isEmpty) {}
     }
     emit(res);
   }

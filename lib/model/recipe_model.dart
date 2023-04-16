@@ -1,11 +1,24 @@
+import 'package:hive/hive.dart';
+
+part 'recipe_model.g.dart';
+
+@HiveType(typeId: 1)
 class RecipeModel {
+  @HiveField(0)
   int? id;
+  @HiveField(1)
   String? name;
+  @HiveField(2)
   String? thumbnailUrl;
+  @HiveField(3)
   int? totalTimeMinutes;
+  @HiveField(4)
   Map<String, dynamic>? userRatings;
+  @HiveField(5)
   List<dynamic>? instructions;
+  @HiveField(6)
   List<dynamic>? topics;
+  @HiveField(7)
   bool? isFavorite;
 
   RecipeModel({

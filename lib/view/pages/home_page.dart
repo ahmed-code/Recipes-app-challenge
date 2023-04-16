@@ -13,23 +13,16 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFFFFEFB),
       body: SafeArea(
-        child: Container(
-          constraints: const BoxConstraints(maxWidth: 800),
-          padding: const EdgeInsets.all(16),
-          child: LayoutBuilder(
-            builder: (BuildContext context, BoxConstraints constraints) {
-              double width = constraints.maxWidth;
-              double height = constraints.maxHeight;
-
-              return ListView(
-                children: const [
-                  SearchBar(),
-                  SizedBox(height: 40),
-                  PageViewBuilder(),
-                  Favorites(),
-                ],
-              );
-            },
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: ListView(
+            children: const [
+              SearchBar(),
+              SizedBox(height: 20),
+              PageViewBuilder(),
+              SizedBox(height: 20),
+              Favorites(),
+            ],
           ),
         ),
       ),

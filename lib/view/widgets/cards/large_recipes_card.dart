@@ -6,8 +6,12 @@ import '../../../model/recipe_model.dart';
 class LargeRecipesCard extends StatelessWidget {
   final RecipeModel recipeModel;
   final void Function()? favoriteOnPressed;
+  final bool isFavorite;
   const LargeRecipesCard(
-      {super.key, required this.recipeModel, required this.favoriteOnPressed});
+      {super.key,
+      required this.recipeModel,
+      required this.favoriteOnPressed,
+      required this.isFavorite});
 
   @override
   Widget build(BuildContext context) {
@@ -60,10 +64,11 @@ class LargeRecipesCard extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
               child: Text(
-                "${recipeModel.isFavorite} ${recipeModel.name!}",
+                recipeModel.name!,
                 maxLines: 1,
                 style: const TextStyle(
                   fontWeight: FontWeight.w600,
@@ -91,9 +96,15 @@ class LargeRecipesCard extends StatelessWidget {
                   const Spacer(),
                   IconButton(
                     onPressed: favoriteOnPressed,
-                    icon: const Icon(
-                      Icons.favorite_border,
-                    ),
+                    icon: isFavorite
+                        ? const Icon(
+                            Icons.favorite,
+                            color: Colors.red,
+                          )
+                        : const Icon(
+                            Icons.favorite_border,
+                            color: Colors.red,
+                          ),
                   ),
                 ],
               ),
