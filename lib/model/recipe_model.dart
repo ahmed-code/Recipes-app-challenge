@@ -41,31 +41,4 @@ class RecipeModel {
     instructions = json['instructions'];
     components = json['sections'][0]['components'];
   }
-
-  // Map<String, dynamic> toJson() {
-  //   final Map<String, dynamic> data = new Map<String, dynamic>();
-  //   data['id'] = this.id;
-  //   data['name'] = this.name;
-  //   data['thumbnail_url'] = this.thumbnailUrl;
-  //   data['total_time_minutes'] = this.totalTimeMinutes;
-  //   data['user_ratings'] = this.userRatings;
-  //   data['instructions'] = this.instructions;
-  //   data['sections'] = this.components;
-  //   // data['isFavorite'] = this.isFavorite;
-
-  //   return data;
-  // }
 }
-
-
-// {
-//     "name": "",
-//     "thumbnail_url": "",
-//     "user_ratings": "",
-//     "instructions": [
-//         ""
-//     ],
-//     "topics": [
-//         ""
-//     ]
-// }

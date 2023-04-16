@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:recipes/model/recipe_model.dart';
-
 import '../../pages/details.dart';
 
 class FavoriteCard extends StatelessWidget {

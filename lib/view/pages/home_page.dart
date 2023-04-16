@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:recipes/model/recipe_api.dart';
-import 'package:recipes/model/recipe_model.dart';
 import 'package:recipes/view/widgets/favorites.dart';
 import 'package:recipes/view/widgets/page_view_builder.dart';
 import 'package:recipes/view/widgets/search_bar.dart';

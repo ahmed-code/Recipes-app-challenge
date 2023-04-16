@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:recipes/view/pages/details.dart';
-
 import '../../../model/recipe_model.dart';
 
 class LargeRecipesCard extends StatelessWidget {

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hive/hive.dart';
 import 'package:recipes/cubits/favorites_cubit/favorites_cubit.dart';
 import 'package:recipes/view/widgets/cards/favorites_card.dart';
 

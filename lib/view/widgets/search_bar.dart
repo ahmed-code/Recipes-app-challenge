@@ -24,7 +24,6 @@ class SearchBar extends StatelessWidget {
             Icons.search,
           ),
         ),
-        // onSubmitted: (value) {},
       ),
     );
   }

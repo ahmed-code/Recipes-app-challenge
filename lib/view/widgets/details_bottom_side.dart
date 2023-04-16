@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipes/view/widgets/ingredients.dart';
 import 'package:recipes/view/widgets/instructions.dart';
-
 import '../../model/recipe_model.dart';
 
 class DetailsBottomSide extends StatelessWidget {
