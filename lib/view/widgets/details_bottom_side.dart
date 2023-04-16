@@ -83,10 +83,10 @@ class DetailsBottomSide extends StatelessWidget {
                   )
                 ],
               ),
-        recipeModel.topics!.isEmpty
+        recipeModel.components!.isEmpty
             ? Container()
             : Ingredients(
-                ingredients: recipeModel.topics!,
+                ingredients: recipeModel.components!,
               ),
         recipeModel.instructions!.isEmpty
             ? Container()

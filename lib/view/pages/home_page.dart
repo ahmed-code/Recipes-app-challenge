@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFFFEFB),
+      backgroundColor: const Color.fromARGB(255, 252, 253, 246),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16.0),

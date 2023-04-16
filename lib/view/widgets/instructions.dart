@@ -10,7 +10,7 @@ class Instructions extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 15),
+        const SizedBox(height: 20),
         const Text(
           "instructions",
           style: TextStyle(
@@ -47,14 +47,14 @@ class Instructions extends StatelessWidget {
                     "Step ${index + 1}",
                     style: const TextStyle(
                       fontSize: 16,
-                      fontWeight: FontWeight.w700,
+                      color: Color.fromARGB(255, 49, 143, 250),
                     ),
                   ),
                   Text(
                     instructions[index]["display_text"],
                     style: const TextStyle(
                       fontSize: 16,
-                      fontWeight: FontWeight.w400,
+                      color: Color.fromARGB(255, 61, 61, 61),
                     ),
                   ),
                 ],

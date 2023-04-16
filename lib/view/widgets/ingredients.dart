@@ -9,7 +9,7 @@ class Ingredients extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 15),
+        const SizedBox(height: 20),
         const Text(
           "ingredients",
           style: TextStyle(
@@ -23,9 +23,10 @@ class Ingredients extends StatelessWidget {
           child: GridView(
             padding: EdgeInsets.zero,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4,
+              crossAxisCount: 3,
               crossAxisSpacing: 8,
               mainAxisSpacing: 8,
+              childAspectRatio: 1.5,
             ),
             shrinkWrap: true,
             physics: const ScrollPhysics(),
@@ -33,20 +34,25 @@ class Ingredients extends StatelessWidget {
               ingredients.length,
               (index) => Container(
                 alignment: Alignment.center,
+                padding: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 255, 255, 255),
                   borderRadius: BorderRadius.circular(16),
                   boxShadow: const [
                     BoxShadow(
                       blurRadius: 4,
-                      color: Colors.black12,
+                      color: Colors.black26,
                       offset: Offset(0, 0),
                     ),
                   ],
                 ),
                 child: Text(
-                  "${ingredients[index]["name"]}",
+                  "${ingredients[index]["ingredient"]["name"]}",
                   textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    color: Color.fromARGB(255, 61, 61, 61),
+                  ),
                 ),
               ),
             ),

@@ -23,7 +23,7 @@ class RecipeModelAdapter extends TypeAdapter<RecipeModel> {
       totalTimeMinutes: fields[3] as int?,
       userRatings: (fields[4] as Map?)?.cast<String, dynamic>(),
       instructions: (fields[5] as List?)?.cast<dynamic>(),
-      topics: (fields[6] as List?)?.cast<dynamic>(),
+      components: (fields[6] as List?)?.cast<dynamic>(),
       isFavorite: fields[7] as bool?,
     );
   }
@@ -45,7 +45,7 @@ class RecipeModelAdapter extends TypeAdapter<RecipeModel> {
       ..writeByte(5)
       ..write(obj.instructions)
       ..writeByte(6)
-      ..write(obj.topics)
+      ..write(obj.components)
       ..writeByte(7)
       ..write(obj.isFavorite);
   }

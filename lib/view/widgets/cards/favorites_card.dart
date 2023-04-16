@@ -44,7 +44,7 @@ class FavoriteCard extends StatelessWidget {
         child: Row(
           children: [
             Container(
-              width: 50,
+              width: 55,
               height: 65,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(7),
@@ -66,7 +66,7 @@ class FavoriteCard extends StatelessWidget {
                   child: Text(
                     recipeModel.name!,
                     style: const TextStyle(
-                      fontSize: 20,
+                      fontSize: 17,
                       fontWeight: FontWeight.w700,
                     ),
                     maxLines: 1,

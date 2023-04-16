@@ -29,7 +29,7 @@ class _DetailsState extends State<Details> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFFFEFB),
+      backgroundColor: const Color(0xFFFDFFF6),
       body: Stack(
         children: [
           DetailsTopSide(
@@ -97,7 +97,7 @@ class _DetailsState extends State<Details> {
               height: MediaQuery.of(context).size.height / 1.7,
               padding: const EdgeInsets.all(10),
               decoration: const BoxDecoration(
-                color: Color(0xFFFFFEFB),
+                color: Color.fromARGB(255, 252, 253, 246),
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(30),
                 ),
