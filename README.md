@@ -1,4 +1,4 @@
-# recipes challnge
+# recipes app challnge
 
 ❇️ this app developed using flutter
 
