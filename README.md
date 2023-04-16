@@ -1,16 +1,19 @@
-# recipes
+# recipes app challnge
 
-A new Flutter project.
+❇️ this app developed using flutter
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+### techniques used:
+✅ bloc <br />
+✅ hive <br />
+✅ API   <br />
+✅ native splash screen <br />
 
-A few resources to get you started if this is your first Flutter project:
+### screenshot
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/87250282/232328242-18d7c554-396a-4269-9801-7aafaea25d8e.png" width="210" />
+  <img src="https://user-images.githubusercontent.com/87250282/232328245-cf2c4afd-5929-4016-8c5c-2230f764d97d.png" width="210" /> 
+  <img src="https://user-images.githubusercontent.com/87250282/232328249-cf73612e-9a07-4525-aed1-1ad518092685.png" width="210" />
+</p>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
